@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ .'/class-testscenario.php';
+require_once __DIR__ .'/json/class-jsontestscenario.php';
 
 ?>
 <!DOCTYPE html>
@@ -13,15 +14,16 @@ require_once __DIR__ .'/class-testscenario.php';
         .scenario {
             margin: 20px 0;
         }
-        .scenario .correct {
+        .scenario .correct::marker {
             color: green;
         }
-        .scenario .incorrect {
+        .scenario .incorrect::marker {
             color: red;
         }
     </style>
 </head>
 <body>
     <?php $TestScenario = new TestScenario(); ?>
+    <?php $JsonTestScenario = new JsonTestScenario(); ?>
 </body>
 </html>
